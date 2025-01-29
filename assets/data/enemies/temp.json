@@ -1,0 +1,11 @@
+{
+    "name": "Temp",
+    "assets": [
+        {"asset":"idle", "file":"temp-idle"},
+        {"asset":"attack", "file":"temp-attack"}
+    ],
+    "behavior": [
+        {"name": "idle", "chance": 90},
+        {"name": "attack", "chance": 10}
+    ]
+}
