@@ -5,7 +5,7 @@
         {"asset":"attack", "file":"temp-attack"}
     ],
     "behavior": [
-        {"name": "idle", "chance": 90},
-        {"name": "attack", "chance": 10}
+        {"name": "idle", "chance": 90, "array_index": 0},
+        {"name": "attack", "chance": 10, "array_index": 1}
     ]
 }

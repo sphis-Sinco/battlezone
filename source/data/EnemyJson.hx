@@ -17,4 +17,5 @@ typedef EnemyBehaviorJson =
 {
 	var name:String;
 	var chance:Float;
+	var array_index:Int;
 }
