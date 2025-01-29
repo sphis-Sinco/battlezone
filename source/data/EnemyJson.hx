@@ -1,3 +1,5 @@
+package data;
+
 typedef EnemyJson =
 {
 	var name:String;
