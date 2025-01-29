@@ -12,7 +12,7 @@ class PlayState extends FlxState
 
 	override public function create()
 	{
-		ENEMY_JSON = Json.parse(FileManager.readFile(FileManager.getDataFile('enemies/$ENEMY')));
+		ENEMY_JSON = Json.parse(FileManager.readFile(FileManager.getDataFile('enemies/$ENEMY.json')));
 		trace(ENEMY_JSON);
 
 		super.create();
