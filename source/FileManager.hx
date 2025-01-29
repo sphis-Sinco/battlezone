@@ -26,7 +26,7 @@ class FileManager
 			MAYBE there is now a feature flag required to be specified for specific functions to function. 
 			I mean these can be big too but yknow. 1 thing at a time.
 	 */
-	public static var FILE_MANAGER_VERSION:Float = 5.6;
+	public static var FILE_MANAGER_VERSION:Float = 6.0;
 
 	public static function getPath(pathprefix:String, path:String, ?PATH_TYPE:PathTypes = DEFAULT):String
 		return '${pathprefix}${PATH_TYPE}${path}';
@@ -79,7 +79,21 @@ class FileManager
 
 	public static function readFile(path:String)
 	{
-		return Assets.getText(path);
+		try
+		{
+			return Assets.getText(path);
+		}
+		catch (e)
+		{
+			#if sys
+			trace(e);
+			Sys.exit(0);
+			return '';
+			#else
+			throw e;
+			return '';
+			#end
+		}
 	}
 
 	public static function readDirectory(dir:String)
