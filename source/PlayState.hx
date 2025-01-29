@@ -24,7 +24,10 @@ class PlayState extends FlxState
 
 		ENEMY_TIMER = new FlxTimer(new FlxTimerManager());
 
-		enemyTime();
+		ENEMY_TIMER.start(FlxG.random.float(1, 2), _timer ->
+		{
+			enemyTime();
+		});
 
 		super.create();
 	}
